@@ -6,6 +6,8 @@ class TurringMachine:
         self.finished = False
         self.current_state = first_state
         self.empty_symbol = empty_symbol
+        self.number_of_steps = 0
+        self.max_used_tape_length = 0
 
     def find_rule(self, symbol):
         for e in self.rules:
@@ -19,6 +21,7 @@ class TurringMachine:
             self.head = self.head + 1
 
     def step(self):
+        self.number_of_steps += 1
         if self.current_state.end is True:
             self.finished = True
             return
