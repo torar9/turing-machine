@@ -11,6 +11,7 @@ def main():
 
     q0 = State('q0', True, False)
 
+    # Rule(q0, 'a', q0, 'a', Operation.R), Rule(q0, '#', q6, '#', Operation.L)
     rules = []
 
     turr = TurringMachine(q0, tape, rules, head=1)
