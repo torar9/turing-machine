@@ -39,8 +39,10 @@ def main():
 
     turr = TurringMachine(q0, tape, rules, head=1)
 
+    print('Input: {}'.format(turr.tape))
+    print('Turing machine steps:')
     while turr.finished is False:
-        print(turr.tape)
+        print("  state: '{}' head: {} tape: {}".format(turr.current_state.name, turr.head, turr.tape))
         turr.step()
     print('Finished')
     print('Output: {}'.format(turr.tape))
