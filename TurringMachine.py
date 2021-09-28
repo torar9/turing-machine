@@ -43,3 +43,6 @@ class TurringMachine:
         if self.current_state.end:
             self.finished = True
         self.current_state = rule.next_state
+
+        if self.max_used_tape_length < len(self.tape):
+            self.max_used_tape_length = len(self.tape)
