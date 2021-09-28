@@ -28,7 +28,7 @@ class TurringMachine:
         self.tape = self.tape[0:self.head] + rule.next_symbol + self.tape[self.head+1:]
         self.head = self.head + int(rule.operation)
 
-        # Make sure tape starts and ens with empty symbol
+        # Make sure tape starts and ends with empty symbol
         self.stylize_tape()
 
         if self.head < 0:
