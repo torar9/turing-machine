@@ -22,12 +22,16 @@ class TurringMachine:
 
     def step(self):
         self.number_of_steps += 1
-        if self.current_state.end is True:
-            self.finished = True
+        symbol = self.tape[self.head]
+
+        try:
+            rule = self.find_rule(symbol)
+        except Exception:
+            if (self.current_state.end is True):
+                self.finished = True
+            else: print('Unable to find rule')
             return
 
-        symbol = self.tape[self.head]
-        rule = self.find_rule(symbol)
         self.tape = self.tape[0:self.head] + rule.next_symbol + self.tape[self.head+1:]
         self.head = self.head + int(rule.operation)
 
