@@ -22,6 +22,8 @@ def main():
         print("  state: '{}' head: {} tape: {}".format(turr.current_state.name, turr.head, turr.tape))
         turr.step()
     print('Finished')
+    print('Machine stopped after: {} steps'.format(turr.number_of_steps))
+    print('Machine used maximum of: {} boxes on the tape'.format(turr.max_used_tape_length))
     print('Output: {}'.format(turr.tape))
 
 
