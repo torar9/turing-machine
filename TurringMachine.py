@@ -7,7 +7,7 @@ class TurringMachine:
         self.current_state = first_state
         self.empty_symbol = empty_symbol
         self.number_of_steps = 0
-        self.max_used_tape_length = 0
+        self.max_used_tape_length = len(self.tape)
 
     def find_rule(self, symbol):
         for e in self.rules:
@@ -48,5 +48,5 @@ class TurringMachine:
             self.finished = True
         self.current_state = rule.next_state
 
-        if self.max_used_tape_length < len(self.tape):
-            self.max_used_tape_length = len(self.tape)
+        if self.max_used_tape_length < self.head + 1:
+            self.max_used_tape_length = self.head + 1
