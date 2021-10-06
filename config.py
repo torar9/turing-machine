@@ -10,9 +10,10 @@ q4 = State('q4', False, False)
 q5 = State('q5', False, False)
 q6 = State('q6', False, False)
 q7 = State('q7', False, False)
-qe = State('qe', False, True)
 q8 = State('qc', False, False)
 q9 = State('qc', False, False)
+q10 = State('qc', False, False)
+qe = State('qe', False, True)
 
 rules = [
         [Rule(q0, '0', q1, '0', Operation.R), Rule(q0, '#', q1, '#', Operation.N)],
