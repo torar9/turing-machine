@@ -23,7 +23,7 @@ def main():
     while turr.finished is False:
         turr.step()
     print('Machine stopped after: {} steps'.format(turr.number_of_steps))
-    print('Machine used maximum of: {} boxes on both tapes'.format(turr.max_tape_length[0] + turr.max_tape_length[1]))
+    print('Machine used maximum of: {} boxes'.format(turr.max_tape_length[0] + turr.max_tape_length[1]))
     print('Output tape: {}'.format(turr.tapes[1]))
     print('Printing all tapes: {}'.format(turr.tapes))
 
