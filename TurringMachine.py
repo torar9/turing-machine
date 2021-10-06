@@ -45,8 +45,6 @@ class TurringMachine:
         self.number_of_steps += 1
         symbol = self.find_symbols()
         for i in range(len(self.heads)):
-            #symbol[i] = self.tape[i][self.head[i]]
-
             try:
                 rule = self.find_rule(symbol)[i]
             except Exception:
