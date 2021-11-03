@@ -10,7 +10,7 @@ def main():
     tape = "#10#1101#"
 
     q0 = State('q0', True, False)
-    q1 = State('q1', True, False)
+    q1 = State('q1', False, False)
     q2 = State('q2', False, False)
     q3 = State('q3', False, False)
     q4 = State('q4', False, False)
